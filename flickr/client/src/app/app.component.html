@@ -1,0 +1,8 @@
+<app-search></app-search>
+<div class="feed-wrapper">
+  <div *ngFor="let item of build; let i= index" id='{{"item"+i}}' class="feed-wrapper--inner">
+    <img  class="feed-wrapper--inner--img" src='{{item.media.m}}'/>
+  </div>
+</div>
+
+

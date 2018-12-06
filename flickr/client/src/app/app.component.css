@@ -1,0 +1,10 @@
+.feed-wrapper{
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.feed-wrapper--inner{
+    max-width: 25%;
+    margin:10px;
+    float: left;
+}
