@@ -20,5 +20,21 @@ export class FeedService {
     return this.http.get(url)
    // Call map on the response observable to get the parsed object
    .map(res => res.json());
+  };
+  getDogFeed(key=''){
+
+      let url;
+      // included localhost:3000 for running/testing sole Angular 6 app
+      if (key) {
+        url = `https://dog.ceo/api/breed/${key}/images/random/10`;
+      }else {
+        url = `https://dog.ceo/api/breeds/list/all`;
+      }
+      return this.http.get(url)
+     
+     // Call map on the response observable to get the parsed object
+     .map(res => res.json());
+  
   }
+  
 }

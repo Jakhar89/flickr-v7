@@ -1,5 +1,15 @@
+<div class="feed-wrapper--descriptor">
+    <h3>Flickr API</h3>
+    <small><a href="https://www.flickr.com/services/feeds/docs/photos_public/">from Flickr</a></small>
+  </div>
 <form class="search-form" (ngSubmit)="onSubmit()" >
   <label for="srch">Search Keywords</label>
   <input type="text" id="srch" name="srch" [(ngModel)]="srch.key">
   <button type="submit" class="btn btn-success">Submit</button>
 </form>
+
+<div class="feed-wrapper">
+    <div *ngFor="let item of build; let i= index" id='{{"item"+i}}' class="feed-wrapper--inner">
+      <img  class="feed-wrapper--inner--img" src='{{item.media.m}}'/>
+    </div>
+</div>

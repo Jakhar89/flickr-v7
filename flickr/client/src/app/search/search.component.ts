@@ -1,5 +1,6 @@
 import { AppComponent } from './../app.component';
 import { Component, OnInit } from '@angular/core';
+import { FeedService } from '../feed.service';
 
 
 
@@ -10,14 +11,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
   srch = {key: ''};
-  constructor(public app: AppComponent) {
-   }
-
-  ngOnInit() {
+  title = 'Feed Service';
+  build= [];
+  constructor(public feed: FeedService) {}
+  // tslint:disable-next-line:use-life-cycle-interface
+  ngOnInit(key= '') {
+    this.feed.getPosts(key).subscribe((post) => {
+      this.build = [];
+      post.items.forEach(elem => {
+          this.build.push(elem);
+      });
+      // console.log(this.build);
+    });
   }
+
+
   onSubmit() {
     if (this.srch.key !== '') {
-      this.app.ngOnInit(this.srch.key);
+      this.ngOnInit(this.srch.key);
     }
   }
 }

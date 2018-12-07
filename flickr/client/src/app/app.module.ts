@@ -7,16 +7,20 @@ import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import {Http} from '@angular/http';
 import { SearchComponent } from './search/search.component';
+import { DogsCompComponent } from './dogs/dogs-comp/dogs-comp.component';
+import {RouteModuleRoutingModule} from './route-module/route-module-routing.module'
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent
+    SearchComponent,
+    DogsCompComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    RouteModuleRoutingModule
   ],
   providers: [FeedService,
  ],

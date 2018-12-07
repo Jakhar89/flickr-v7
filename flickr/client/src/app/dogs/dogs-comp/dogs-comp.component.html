@@ -1,0 +1,26 @@
+<div [ngClass]="{'dogFeed-wrapper':show}">
+  <div *ngIf="show">
+      <div class="feed-wrapper--descriptor">
+          <h3>Dogs API</h3>
+          <small><a href="https://dog.ceo/dog-api/">from Dog Ceo</a></small>
+      </div>
+      <button *ngFor="let item of list; let i= index" id='{{"item"+i}}' 
+      [attr.data-pull]="item.ref" (click)=clickPull(item.ref,item.entry)>
+        {{item.entry}}
+      </button>
+    </div>
+  <div *ngIf="show2" class="feed-wrapper">
+      <div class="feed-wrapper--descriptor">
+          <h3>{{setTitle}} Images</h3>
+          <small><a href="https://dog.ceo/dog-api/">from Dog Ceo</a></small>
+        </div>
+    <div class="dogFeed-button">
+      
+        <input type="button" id="listView" value="Show List View" (click)=reload() >
+      
+    </div>
+    <div *ngFor="let img of images;let i = index" id="{{'img'+i}}" class="feed-wrapper--inner">
+      <img  src="{{img}}">
+    </div>
+  </div>
+</div>
