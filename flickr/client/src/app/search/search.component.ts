@@ -13,15 +13,18 @@ export class SearchComponent implements OnInit {
   srch = {key: ''};
   title = 'Feed Service';
   build= [];
+  loading=false;
   constructor(public feed: FeedService) {}
   // tslint:disable-next-line:use-life-cycle-interface
   ngOnInit(key= '') {
+    this.loading=true;
     this.feed.getPosts(key).subscribe((post) => {
       this.build = [];
       post.items.forEach(elem => {
           this.build.push(elem);
       });
       // console.log(this.build);
+      this.loading=false;
     });
   }
 

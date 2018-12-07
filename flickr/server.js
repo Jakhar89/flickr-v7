@@ -23,6 +23,10 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', index);
 app.use('/app', tasks);
 
+app.get('*', function(req, res) {
+    res.sendfile('./client/dist/index.html')
+  })
+
 app.listen(port, function(){
     console.log('Server started on port '+port);
 });

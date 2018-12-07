@@ -7,8 +7,10 @@
   <input type="text" id="srch" name="srch" [(ngModel)]="srch.key">
   <button type="submit" class="btn btn-success">Submit</button>
 </form>
-
-<div class="feed-wrapper">
+<div class="loader" *ngIf="loading">
+    <img src='https://loading.io/spinners/microsoft/lg.rotating-balls-spinner.gif'/>
+</div>
+<div class="feed-wrapper" *ngIf="!loading">
     <div *ngFor="let item of build; let i= index" id='{{"item"+i}}' class="feed-wrapper--inner">
       <img  class="feed-wrapper--inner--img" src='{{item.media.m}}'/>
     </div>

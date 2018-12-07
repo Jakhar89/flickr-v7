@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "nav ul{\n    list-style: none;\n    padding-left: 5px;\n    display: flex;\n}\nnav ul li{\n    float: left;\n    width: 10%;\n    padding: 5px;\n    text-transform: capitalize;\n    background: darkturquoise;\n    text-align: center;\n    margin: 5px;\n}\nnav ul li a{\n    text-decoration: none;\n    color:white;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxpQkFBaUI7SUFDakIsa0JBQWtCO0lBQ2xCLGNBQWM7Q0FDakI7QUFDRDtJQUNJLFlBQVk7SUFDWixXQUFXO0lBQ1gsYUFBYTtJQUNiLDJCQUEyQjtJQUMzQiwwQkFBMEI7SUFDMUIsbUJBQW1CO0lBQ25CLFlBQVk7Q0FDZjtBQUNEO0lBQ0ksc0JBQXNCO0lBQ3RCLFlBQVk7Q0FDZiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsibmF2IHVse1xuICAgIGxpc3Qtc3R5bGU6IG5vbmU7XG4gICAgcGFkZGluZy1sZWZ0OiA1cHg7XG4gICAgZGlzcGxheTogZmxleDtcbn1cbm5hdiB1bCBsaXtcbiAgICBmbG9hdDogbGVmdDtcbiAgICB3aWR0aDogMTAlO1xuICAgIHBhZGRpbmc6IDVweDtcbiAgICB0ZXh0LXRyYW5zZm9ybTogY2FwaXRhbGl6ZTtcbiAgICBiYWNrZ3JvdW5kOiBkYXJrdHVycXVvaXNlO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBtYXJnaW46IDVweDtcbn1cbm5hdiB1bCBsaSBhe1xuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgICBjb2xvcjp3aGl0ZTtcbn0iXX0= */"
+module.exports = "nav ul{\n    list-style: none;\n    padding-left: 5px;\n    display: flex;\n}\nnav ul li{\n    float: left;\n    width: 10%;\n    padding: 0;\n    text-transform: capitalize;\n    background: darkturquoise;\n    text-align: center;\n    margin: 5px;\n}\nnav ul li a{\n    text-decoration: none;\n    color:white;\n    display: block;\n    padding: 5px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxpQkFBaUI7SUFDakIsa0JBQWtCO0lBQ2xCLGNBQWM7Q0FDakI7QUFDRDtJQUNJLFlBQVk7SUFDWixXQUFXO0lBQ1gsV0FBVztJQUNYLDJCQUEyQjtJQUMzQiwwQkFBMEI7SUFDMUIsbUJBQW1CO0lBQ25CLFlBQVk7Q0FDZjtBQUNEO0lBQ0ksc0JBQXNCO0lBQ3RCLFlBQVk7SUFDWixlQUFlO0lBQ2YsYUFBYTtDQUNoQiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsibmF2IHVse1xuICAgIGxpc3Qtc3R5bGU6IG5vbmU7XG4gICAgcGFkZGluZy1sZWZ0OiA1cHg7XG4gICAgZGlzcGxheTogZmxleDtcbn1cbm5hdiB1bCBsaXtcbiAgICBmbG9hdDogbGVmdDtcbiAgICB3aWR0aDogMTAlO1xuICAgIHBhZGRpbmc6IDA7XG4gICAgdGV4dC10cmFuc2Zvcm06IGNhcGl0YWxpemU7XG4gICAgYmFja2dyb3VuZDogZGFya3R1cnF1b2lzZTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgbWFyZ2luOiA1cHg7XG59XG5uYXYgdWwgbGkgYXtcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gICAgY29sb3I6d2hpdGU7XG4gICAgZGlzcGxheTogYmxvY2s7XG4gICAgcGFkZGluZzogNXB4O1xufSJdfQ== */"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "nav ul{\n    list-style: none;\n    padding-left: 5px;\n    di
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header>\n    <nav>\n        <ul>\n          <li><a routerLink=\"/\">flickr</a></li>\n          <li><a routerLink=\"/dogs\">dogs</a></li>\n        </ul>\n    </nav>\n  </header>\n\n<router-outlet></router-outlet>\n\n\n\n"
+module.exports = "<header>\n    <nav>\n        <ul>\n          <li><a (click)=\"reload('/')\" routerLink=\"/\">flickr API</a></li>\n          <li><a (click)=\"reload('/dogs')\" routerLink=\"/dogs\">dogs API</a></li>\n        </ul>\n    </nav>\n  </header>\n\n<router-outlet></router-outlet>\n\n\n\n"
 
 /***/ }),
 
@@ -57,17 +57,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _route_module_route_module_routing_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./route-module/route-module-routing.module */ "./src/app/route-module/route-module-routing.module.ts");
+
 
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent() {
+    function AppComponent(routerM) {
+        this.routerM = routerM;
     }
+    AppComponent.prototype.reload = function (uri) {
+        this.routerM.redirectTo(uri);
+    };
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
-        })
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_route_module_route_module_routing_module__WEBPACK_IMPORTED_MODULE_2__["RouteModuleRoutingModule"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -141,7 +148,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".feed-wrapper{\n    max-width: 100%;\n    display: flex;\n    flex-wrap: wrap;\n}\n.feed-wrapper--inner{\n    max-width: 25%;\n    margin:10px;\n    float: left;\n}\n.feed-wrapper--inner img{\n    max-width: 100%;\n}\n.dogFeed-button{\n    width:100%;\n}\n.dogFeed-wrapper button{\n    font-size: 1rem;\n    text-transform: capitalize;\n    margin: 5px;\n    cursor: pointer;\n}\n.feed-wrapper--descriptor{\n    margin-bottom: 10px;\n    margin-left: 5px;\n}\n#listView{\n    font-size: 1rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZG9ncy9kb2dzLWNvbXAvZG9ncy1jb21wLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxnQkFBZ0I7SUFDaEIsY0FBYztJQUNkLGdCQUFnQjtDQUNuQjtBQUNEO0lBQ0ksZUFBZTtJQUNmLFlBQVk7SUFDWixZQUFZO0NBQ2Y7QUFDRDtJQUNJLGdCQUFnQjtDQUNuQjtBQUNEO0lBQ0ksV0FBVztDQUNkO0FBRUQ7SUFDSSxnQkFBZ0I7SUFDaEIsMkJBQTJCO0lBQzNCLFlBQVk7SUFDWixnQkFBZ0I7Q0FDbkI7QUFDRDtJQUNJLG9CQUFvQjtJQUNwQixpQkFBaUI7Q0FDcEI7QUFDRDtJQUNJLGdCQUFnQjtDQUNuQiIsImZpbGUiOiJzcmMvYXBwL2RvZ3MvZG9ncy1jb21wL2RvZ3MtY29tcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZlZWQtd3JhcHBlcntcbiAgICBtYXgtd2lkdGg6IDEwMCU7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LXdyYXA6IHdyYXA7XG59XG4uZmVlZC13cmFwcGVyLS1pbm5lcntcbiAgICBtYXgtd2lkdGg6IDI1JTtcbiAgICBtYXJnaW46MTBweDtcbiAgICBmbG9hdDogbGVmdDtcbn1cbi5mZWVkLXdyYXBwZXItLWlubmVyIGltZ3tcbiAgICBtYXgtd2lkdGg6IDEwMCU7XG59XG4uZG9nRmVlZC1idXR0b257XG4gICAgd2lkdGg6MTAwJTtcbn1cblxuLmRvZ0ZlZWQtd3JhcHBlciBidXR0b257XG4gICAgZm9udC1zaXplOiAxcmVtO1xuICAgIHRleHQtdHJhbnNmb3JtOiBjYXBpdGFsaXplO1xuICAgIG1hcmdpbjogNXB4O1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbn1cbi5mZWVkLXdyYXBwZXItLWRlc2NyaXB0b3J7XG4gICAgbWFyZ2luLWJvdHRvbTogMTBweDtcbiAgICBtYXJnaW4tbGVmdDogNXB4O1xufVxuI2xpc3RWaWV3e1xuICAgIGZvbnQtc2l6ZTogMXJlbTtcbn0iXX0= */"
+module.exports = ".feed-wrapper{\n    max-width: 100%;\n    display: flex;\n    flex-wrap: wrap;\n}\n.feed-wrapper--inner{\n    max-width: 25%;\n    margin:10px;\n    float: left;\n}\n.feed-wrapper--inner img{\n    max-width: 100%;\n}\n.dogFeed-button{\n    width:100%;\n}\n.dogFeed-wrapper button{\n    font-size: 1rem;\n    text-transform: capitalize;\n    margin: 5px;\n    cursor: pointer;\n}\n.feed-wrapper--descriptor{\n    margin-bottom: 10px;\n    margin-left: 5px;\n}\n#listView{\n    font-size: 1rem;\n}\n.loader{\n    text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZG9ncy9kb2dzLWNvbXAvZG9ncy1jb21wLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxnQkFBZ0I7SUFDaEIsY0FBYztJQUNkLGdCQUFnQjtDQUNuQjtBQUNEO0lBQ0ksZUFBZTtJQUNmLFlBQVk7SUFDWixZQUFZO0NBQ2Y7QUFDRDtJQUNJLGdCQUFnQjtDQUNuQjtBQUNEO0lBQ0ksV0FBVztDQUNkO0FBRUQ7SUFDSSxnQkFBZ0I7SUFDaEIsMkJBQTJCO0lBQzNCLFlBQVk7SUFDWixnQkFBZ0I7Q0FDbkI7QUFDRDtJQUNJLG9CQUFvQjtJQUNwQixpQkFBaUI7Q0FDcEI7QUFDRDtJQUNJLGdCQUFnQjtDQUNuQjtBQUNEO0lBQ0ksbUJBQW1CO0NBQ3RCIiwiZmlsZSI6InNyYy9hcHAvZG9ncy9kb2dzLWNvbXAvZG9ncy1jb21wLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZmVlZC13cmFwcGVye1xuICAgIG1heC13aWR0aDogMTAwJTtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtd3JhcDogd3JhcDtcbn1cbi5mZWVkLXdyYXBwZXItLWlubmVye1xuICAgIG1heC13aWR0aDogMjUlO1xuICAgIG1hcmdpbjoxMHB4O1xuICAgIGZsb2F0OiBsZWZ0O1xufVxuLmZlZWQtd3JhcHBlci0taW5uZXIgaW1ne1xuICAgIG1heC13aWR0aDogMTAwJTtcbn1cbi5kb2dGZWVkLWJ1dHRvbntcbiAgICB3aWR0aDoxMDAlO1xufVxuXG4uZG9nRmVlZC13cmFwcGVyIGJ1dHRvbntcbiAgICBmb250LXNpemU6IDFyZW07XG4gICAgdGV4dC10cmFuc2Zvcm06IGNhcGl0YWxpemU7XG4gICAgbWFyZ2luOiA1cHg7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xufVxuLmZlZWQtd3JhcHBlci0tZGVzY3JpcHRvcntcbiAgICBtYXJnaW4tYm90dG9tOiAxMHB4O1xuICAgIG1hcmdpbi1sZWZ0OiA1cHg7XG59XG4jbGlzdFZpZXd7XG4gICAgZm9udC1zaXplOiAxcmVtO1xufVxuLmxvYWRlcntcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59Il19 */"
 
 /***/ }),
 
@@ -152,7 +159,7 @@ module.exports = ".feed-wrapper{\n    max-width: 100%;\n    display: flex;\n    
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div [ngClass]=\"{'dogFeed-wrapper':show}\">\n  <div *ngIf=\"show\">\n      <div class=\"feed-wrapper--descriptor\">\n          <h3>Dogs API</h3>\n          <small><a href=\"https://dog.ceo/dog-api/\">from Dog Ceo</a></small>\n      </div>\n      <button *ngFor=\"let item of list; let i= index\" id='{{\"item\"+i}}' \n      [attr.data-pull]=\"item.ref\" (click)=clickPull(item.ref,item.entry)>\n        {{item.entry}}\n      </button>\n    </div>\n  <div *ngIf=\"show2\" class=\"feed-wrapper\">\n      <div class=\"feed-wrapper--descriptor\">\n          <h3>{{setTitle}} Images</h3>\n          <small><a href=\"https://dog.ceo/dog-api/\">from Dog Ceo</a></small>\n        </div>\n    <div class=\"dogFeed-button\">\n      \n        <input type=\"button\" id=\"listView\" value=\"Show List View\" (click)=reload() >\n      \n    </div>\n    <div *ngFor=\"let img of images;let i = index\" id=\"{{'img'+i}}\" class=\"feed-wrapper--inner\">\n      <img  src=\"{{img}}\">\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div [ngClass]=\"{'dogFeed-wrapper':show}\">\n  <div *ngIf=\"show\">\n      <div class=\"feed-wrapper--descriptor\">\n          <h3>Dogs API</h3>\n          <small><a href=\"https://dog.ceo/dog-api/\">from Dog Ceo</a></small>\n      </div>\n      <button *ngFor=\"let item of list; let i= index\" id='{{\"item\"+i}}' \n      [attr.data-pull]=\"item.ref\" (click)=clickPull(item.ref,item.entry)>\n        {{item.entry}}\n      </button>\n    </div>\n  <div *ngIf=\"show2\" class=\"feed-wrapper\">\n      <div class=\"feed-wrapper--descriptor\">\n          <h3>{{setTitle}} Images</h3>\n          <small><a href=\"https://dog.ceo/dog-api/\">from Dog Ceo</a></small>\n        </div>\n    <div class=\"dogFeed-button\">\n      \n        <input type=\"button\" id=\"listView\" value=\"Show List View\" (click)=reload() >\n      \n    </div>\n    <div *ngFor=\"let img of images;let i = index\" id=\"{{'img'+i}}\" class=\"feed-wrapper--inner\">\n      <img  src=\"{{img}}\">\n    </div>\n  </div>\n  <div class=\"loader\" *ngIf=\"loading\">\n      <img src='https://loading.io/spinners/microsoft/lg.rotating-balls-spinner.gif'/>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -179,6 +186,7 @@ var DogsCompComponent = /** @class */ (function () {
         this.show = true;
         this.show2 = false;
         this.setTitle = '';
+        this.loading = false;
         this.images = [];
     }
     DogsCompComponent.prototype.enterList = function (el) {
@@ -187,6 +195,7 @@ var DogsCompComponent = /** @class */ (function () {
     DogsCompComponent.prototype.ngOnInit = function (key) {
         var _this = this;
         if (key === void 0) { key = ''; }
+        this.loading = true;
         this.feed.getDogFeed(key).subscribe(function (post) {
             _this.list = [];
             var _loop_1 = function (key_1, value) {
@@ -211,6 +220,7 @@ var DogsCompComponent = /** @class */ (function () {
                 var _b = _a[_i], key_1 = _b[0], value = _b[1];
                 _loop_1(key_1, value);
             }
+            _this.loading = false;
         });
     };
     DogsCompComponent.prototype.clickPull = function (key, title) {
@@ -218,13 +228,16 @@ var DogsCompComponent = /** @class */ (function () {
         if (key === void 0) { key = ''; }
         if (title === void 0) { title = ''; }
         this.setTitle = title.toUpperCase();
+        this.loading = true;
         this.feed.getDogFeed(key).subscribe(function (post) {
             post.message.forEach(function (element) {
                 _this.images.push(element);
             });
+        }, function () { }, function () {
+            _this.show2 = true;
+            _this.loading = false;
         });
         this.show = false;
-        this.show2 = true;
     };
     DogsCompComponent.prototype.reload = function () {
         location.reload();
@@ -277,10 +290,10 @@ var FeedService = /** @class */ (function () {
         var url;
         // included localhost:3000 for running/testing sole Angular 6 app
         if (key) {
-            url = "http://localhost:3000/app/tasks/" + key;
+            url = "http://localhost:3000/app/tasks/flickr/" + key;
         }
         else {
-            url = "http://localhost:3000/app/tasks";
+            url = "http://localhost:3000/app/tasks/flickr";
         }
         return this.http.get(url)
             // Call map on the response observable to get the parsed object
@@ -292,10 +305,10 @@ var FeedService = /** @class */ (function () {
         var url;
         // included localhost:3000 for running/testing sole Angular 6 app
         if (key) {
-            url = "https://dog.ceo/api/breed/" + key + "/images/random/10";
+            url = "http://localhost:3000/app/tasks/dogs?key=" + key;
         }
         else {
-            url = "https://dog.ceo/api/breeds/list/all";
+            url = "http://localhost:3000/app/tasks/dogs";
         }
         return this.http.get(url)
             // Call map on the response observable to get the parsed object
@@ -332,18 +345,28 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var routes = [
+    { path: 'reload', component: _search_search_component__WEBPACK_IMPORTED_MODULE_4__["SearchComponent"] },
     { path: '', component: _search_search_component__WEBPACK_IMPORTED_MODULE_4__["SearchComponent"] },
-    { path: 'dogs', component: _dogs_dogs_comp_dogs_comp_component__WEBPACK_IMPORTED_MODULE_3__["DogsCompComponent"] }
+    { path: 'dogs', component: _dogs_dogs_comp_dogs_comp_component__WEBPACK_IMPORTED_MODULE_3__["DogsCompComponent"] },
 ];
 var RouteModuleRoutingModule = /** @class */ (function () {
-    function RouteModuleRoutingModule() {
+    function RouteModuleRoutingModule(router) {
+        this.router = router;
     }
+    RouteModuleRoutingModule.prototype.redirectTo = function (uri) {
+        var _this = this;
+        this.router.navigateByUrl('/reload', { skipLocationChange: true }).then(function () {
+            return _this.router.navigate([uri]);
+        });
+    };
     RouteModuleRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes)],
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes, { onSameUrlNavigation: "reload" })],
             exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
-        })
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], RouteModuleRoutingModule);
     return RouteModuleRoutingModule;
 }());
@@ -359,7 +382,7 @@ var RouteModuleRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".search-form *{\n    font-size:1.5rem; \n}\n.feed-wrapper{\n    max-width: 100%;\n    display: flex;\n    flex-wrap: wrap;\n}\n.feed-wrapper--inner{\n    max-width: 25%;\n    margin:10px;\n    float: left;\n}\n.feed-wrapper--descriptor{\n    margin-bottom: 10px;\n    margin-left: 5px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2VhcmNoL3NlYXJjaC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksaUJBQWlCO0NBQ3BCO0FBQ0Q7SUFDSSxnQkFBZ0I7SUFDaEIsY0FBYztJQUNkLGdCQUFnQjtDQUNuQjtBQUNEO0lBQ0ksZUFBZTtJQUNmLFlBQVk7SUFDWixZQUFZO0NBQ2Y7QUFDRDtJQUNJLG9CQUFvQjtJQUNwQixpQkFBaUI7Q0FDcEIiLCJmaWxlIjoic3JjL2FwcC9zZWFyY2gvc2VhcmNoLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2VhcmNoLWZvcm0gKntcbiAgICBmb250LXNpemU6MS41cmVtOyBcbn1cbi5mZWVkLXdyYXBwZXJ7XG4gICAgbWF4LXdpZHRoOiAxMDAlO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC13cmFwOiB3cmFwO1xufVxuLmZlZWQtd3JhcHBlci0taW5uZXJ7XG4gICAgbWF4LXdpZHRoOiAyNSU7XG4gICAgbWFyZ2luOjEwcHg7XG4gICAgZmxvYXQ6IGxlZnQ7XG59XG4uZmVlZC13cmFwcGVyLS1kZXNjcmlwdG9ye1xuICAgIG1hcmdpbi1ib3R0b206IDEwcHg7XG4gICAgbWFyZ2luLWxlZnQ6IDVweDtcbn0iXX0= */"
+module.exports = ".search-form *{\n    font-size:1.5rem; \n}\n.feed-wrapper{\n    max-width: 100%;\n    display: flex;\n    flex-wrap: wrap;\n}\n.feed-wrapper--inner{\n    max-width: 25%;\n    margin:10px;\n    float: left;\n}\n.feed-wrapper--descriptor{\n    margin-bottom: 10px;\n    margin-left: 5px;\n}\n.loader{\n    text-align: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2VhcmNoL3NlYXJjaC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksaUJBQWlCO0NBQ3BCO0FBQ0Q7SUFDSSxnQkFBZ0I7SUFDaEIsY0FBYztJQUNkLGdCQUFnQjtDQUNuQjtBQUNEO0lBQ0ksZUFBZTtJQUNmLFlBQVk7SUFDWixZQUFZO0NBQ2Y7QUFDRDtJQUNJLG9CQUFvQjtJQUNwQixpQkFBaUI7Q0FDcEI7QUFDRDtJQUNJLG1CQUFtQjtDQUN0QiIsImZpbGUiOiJzcmMvYXBwL3NlYXJjaC9zZWFyY2guY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5zZWFyY2gtZm9ybSAqe1xuICAgIGZvbnQtc2l6ZToxLjVyZW07IFxufVxuLmZlZWQtd3JhcHBlcntcbiAgICBtYXgtd2lkdGg6IDEwMCU7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LXdyYXA6IHdyYXA7XG59XG4uZmVlZC13cmFwcGVyLS1pbm5lcntcbiAgICBtYXgtd2lkdGg6IDI1JTtcbiAgICBtYXJnaW46MTBweDtcbiAgICBmbG9hdDogbGVmdDtcbn1cbi5mZWVkLXdyYXBwZXItLWRlc2NyaXB0b3J7XG4gICAgbWFyZ2luLWJvdHRvbTogMTBweDtcbiAgICBtYXJnaW4tbGVmdDogNXB4O1xufVxuLmxvYWRlcntcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59Il19 */"
 
 /***/ }),
 
@@ -370,7 +393,7 @@ module.exports = ".search-form *{\n    font-size:1.5rem; \n}\n.feed-wrapper{\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"feed-wrapper--descriptor\">\n    <h3>Flickr API</h3>\n    <small><a href=\"https://www.flickr.com/services/feeds/docs/photos_public/\">from Flickr</a></small>\n  </div>\n<form class=\"search-form\" (ngSubmit)=\"onSubmit()\" >\n  <label for=\"srch\">Search Keywords</label>\n  <input type=\"text\" id=\"srch\" name=\"srch\" [(ngModel)]=\"srch.key\">\n  <button type=\"submit\" class=\"btn btn-success\">Submit</button>\n</form>\n\n<div class=\"feed-wrapper\">\n    <div *ngFor=\"let item of build; let i= index\" id='{{\"item\"+i}}' class=\"feed-wrapper--inner\">\n      <img  class=\"feed-wrapper--inner--img\" src='{{item.media.m}}'/>\n    </div>\n</div>\n"
+module.exports = "<div class=\"feed-wrapper--descriptor\">\n    <h3>Flickr API</h3>\n    <small><a href=\"https://www.flickr.com/services/feeds/docs/photos_public/\">from Flickr</a></small>\n  </div>\n<form class=\"search-form\" (ngSubmit)=\"onSubmit()\" >\n  <label for=\"srch\">Search Keywords</label>\n  <input type=\"text\" id=\"srch\" name=\"srch\" [(ngModel)]=\"srch.key\">\n  <button type=\"submit\" class=\"btn btn-success\">Submit</button>\n</form>\n<div class=\"loader\" *ngIf=\"loading\">\n    <img src='https://loading.io/spinners/microsoft/lg.rotating-balls-spinner.gif'/>\n</div>\n<div class=\"feed-wrapper\" *ngIf=\"!loading\">\n    <div *ngFor=\"let item of build; let i= index\" id='{{\"item\"+i}}' class=\"feed-wrapper--inner\">\n      <img  class=\"feed-wrapper--inner--img\" src='{{item.media.m}}'/>\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -396,17 +419,20 @@ var SearchComponent = /** @class */ (function () {
         this.srch = { key: '' };
         this.title = 'Feed Service';
         this.build = [];
+        this.loading = false;
     }
     // tslint:disable-next-line:use-life-cycle-interface
     SearchComponent.prototype.ngOnInit = function (key) {
         var _this = this;
         if (key === void 0) { key = ''; }
+        this.loading = true;
         this.feed.getPosts(key).subscribe(function (post) {
             _this.build = [];
             post.items.forEach(function (elem) {
                 _this.build.push(elem);
             });
             // console.log(this.build);
+            _this.loading = false;
         });
     };
     SearchComponent.prototype.onSubmit = function () {

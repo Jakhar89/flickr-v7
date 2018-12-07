@@ -18,6 +18,7 @@ export class DogsCompComponent implements OnInit {
   show=true;
   show2=false;
   setTitle='';
+  loading=false;
   
   
   constructor( public feed : FeedService) {
@@ -28,6 +29,7 @@ export class DogsCompComponent implements OnInit {
   }
 
   ngOnInit(key='') {
+    this.loading=true;
     this.feed.getDogFeed(key).subscribe((post) => {
       this.list=[];
       //console.log(post);
@@ -55,7 +57,7 @@ export class DogsCompComponent implements OnInit {
           this.enterList(build)
         }
       }
-
+      this.loading=false;
     });
   
   }
@@ -63,16 +65,19 @@ export class DogsCompComponent implements OnInit {
   images=[];
   clickPull(key='',title=''){
     this.setTitle=title.toUpperCase();
+    this.loading=true;
     this.feed.getDogFeed(key).subscribe((post)=>{
   
       post.message.forEach(element => {
         this.images.push(element);
       });
-
+     
+    },()=>{},
+    ()=>{
+      this.show2=true;
+      this.loading=false;
     })
     this.show=false;
-    this.show2=true;
-   
   }
   reload(){
     location.reload();

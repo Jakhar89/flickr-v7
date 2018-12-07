@@ -1,5 +1,7 @@
 import { FeedService } from './feed.service';
 import { Component } from '@angular/core';
+import {RouteModuleRoutingModule} from './route-module/route-module-routing.module'
+
 
 @Component({
   selector: 'app-root',
@@ -7,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
+  constructor(public routerM: RouteModuleRoutingModule){}
+  reload(uri){
+    this.routerM.redirectTo(uri);
+  }
 }
