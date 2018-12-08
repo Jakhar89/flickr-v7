@@ -1,4 +1,4 @@
-# Flickr Feed
+# Flickr Feed and DOGS API
 
 ## Development server
 
