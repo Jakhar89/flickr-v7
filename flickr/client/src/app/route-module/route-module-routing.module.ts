@@ -16,8 +16,8 @@ const routes: Routes = [
 })
 export class RouteModuleRoutingModule {
   constructor(public router: Router){}
-  redirectTo(uri:string){
+  /*redirectTo(uri:string){
     this.router.navigateByUrl('/reload',{skipLocationChange: true}).then(()=>
     this.router.navigate([uri]));
-  }
+  }*/
  }
