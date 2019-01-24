@@ -11,6 +11,7 @@ export class FeedService {
   constructor(public http: Http) { }
   getPosts(key= '') {
     let url;
+  
     // included localhost:3000 for running/testing sole Angular 6 app
     if (key) {
       url = `/app/tasks/flickr/${key}`;
