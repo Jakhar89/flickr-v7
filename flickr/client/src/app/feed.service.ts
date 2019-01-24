@@ -13,9 +13,9 @@ export class FeedService {
     let url;
     // included localhost:3000 for running/testing sole Angular 6 app
     if (key) {
-      url = `http://localhost:3000/app/tasks/flickr/${key}`;
+      url = `/app/tasks/flickr/${key}`;
     }else {
-      url = `http://localhost:3000/app/tasks/flickr`;
+      url = `/app/tasks/flickr`;
     }
     return this.http.get(url)
    // Call map on the response observable to get the parsed object
@@ -26,9 +26,9 @@ export class FeedService {
       let url;
       // included localhost:3000 for running/testing sole Angular 6 app
       if (key) {
-        url = `http://localhost:3000/app/tasks/dogs?key=${key}`;
+        url = `/app/tasks/dogs?key=${key}`;
       }else {
-        url = `http://localhost:3000/app/tasks/dogs`;
+        url = `/app/tasks/dogs`;
       }
       return this.http.get(url)
      
