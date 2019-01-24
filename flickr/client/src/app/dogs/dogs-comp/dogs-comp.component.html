@@ -16,7 +16,7 @@
         </div>
     <div class="dogFeed-button">
       
-        <input type="button" id="listView" value="Show List View" routerLink="/dogs" >
+        <input type="button" id="listView" value="Show List View" (click)="reload()" >
       
     </div>
     <div *ngFor="let img of images;let i = index" id="{{'img'+i}}" class="feed-wrapper--inner">

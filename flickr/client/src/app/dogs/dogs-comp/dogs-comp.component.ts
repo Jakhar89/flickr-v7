@@ -79,6 +79,7 @@ export class DogsCompComponent implements OnInit {
     })
     this.show=false;
   }
+  //reload page
   reload(){
     location.reload();
   }

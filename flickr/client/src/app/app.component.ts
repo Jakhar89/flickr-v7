@@ -10,7 +10,8 @@ import {RouteModuleRoutingModule} from './route-module/route-module-routing.modu
 })
 export class AppComponent {
   constructor(public routerM: RouteModuleRoutingModule){}
-  /*reload(uri){
+  //reload function when clicked on same Nav item
+  reload(uri){
     this.routerM.redirectTo(uri);
-  }*/
+  }
 }

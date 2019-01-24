@@ -41,7 +41,7 @@ module.exports = "nav ul{\n    list-style: none;\n    padding-left: 5px;\n    di
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header>\n    <nav>\n        <ul>\n          <li><a routerLink=\"/\">flickr API</a></li>\n          <li><a routerLink=\"/dogs\">dogs API</a></li>\n        </ul>\n    </nav>\n  </header>\n\n<router-outlet></router-outlet>\n\n\n\n"
+module.exports = "<header>\n    <nav>\n        <ul>\n          <li><a (click)=\"reload('/')\" routerLink=\"/\">flickr API</a></li>\n          <li><a (click)=\"reload('/dogs')\" routerLink=\"/dogs\">dogs API</a></li>\n        </ul>\n    </nav>\n  </header>\n\n<router-outlet></router-outlet>\n\n\n\n"
 
 /***/ }),
 
@@ -65,6 +65,10 @@ var AppComponent = /** @class */ (function () {
     function AppComponent(routerM) {
         this.routerM = routerM;
     }
+    //reload function when clicked on same Nav item
+    AppComponent.prototype.reload = function (uri) {
+        this.routerM.redirectTo(uri);
+    };
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-root',
@@ -156,7 +160,7 @@ module.exports = ".feed-wrapper{\n    max-width: 100%;\n    display: flex;\n    
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div [ngClass]=\"{'dogFeed-wrapper':show}\">\n  <div *ngIf=\"show\">\n      <div class=\"feed-wrapper--descriptor\">\n          <h3>Dogs API</h3>\n          <small><a href=\"https://dog.ceo/dog-api/\">from Dog Ceo</a></small>\n      </div>\n      <button *ngFor=\"let item of list; let i= index\" id='{{\"item\"+i}}' \n      [attr.data-pull]=\"item.ref\" (click)=clickPull(item.ref,item.entry)>\n        {{item.entry}}\n      </button>\n    </div>\n  <div *ngIf=\"show2\" class=\"feed-wrapper\">\n      <div class=\"feed-wrapper--descriptor\">\n          <h3>{{setTitle}} Images</h3>\n          <small><a href=\"https://dog.ceo/dog-api/\">from Dog Ceo</a></small>\n        </div>\n    <div class=\"dogFeed-button\">\n      \n        <input type=\"button\" id=\"listView\" value=\"Show List View\" routerLink=\"/dogs\" >\n      \n    </div>\n    <div *ngFor=\"let img of images;let i = index\" id=\"{{'img'+i}}\" class=\"feed-wrapper--inner\">\n      <img  src=\"{{img}}\">\n    </div>\n  </div>\n  <div class=\"loader\" *ngIf=\"loading\">\n      <img src='https://loading.io/spinners/microsoft/lg.rotating-balls-spinner.gif'/>\n  </div>\n</div>\n"
+module.exports = "<div [ngClass]=\"{'dogFeed-wrapper':show}\">\n  <div *ngIf=\"show\">\n      <div class=\"feed-wrapper--descriptor\">\n          <h3>Dogs API</h3>\n          <small><a href=\"https://dog.ceo/dog-api/\">from Dog Ceo</a></small>\n      </div>\n      <button *ngFor=\"let item of list; let i= index\" id='{{\"item\"+i}}' \n      [attr.data-pull]=\"item.ref\" (click)=clickPull(item.ref,item.entry)>\n        {{item.entry}}\n      </button>\n    </div>\n  <div *ngIf=\"show2\" class=\"feed-wrapper\">\n      <div class=\"feed-wrapper--descriptor\">\n          <h3>{{setTitle}} Images</h3>\n          <small><a href=\"https://dog.ceo/dog-api/\">from Dog Ceo</a></small>\n        </div>\n    <div class=\"dogFeed-button\">\n      \n        <input type=\"button\" id=\"listView\" value=\"Show List View\" (click)=\"reload()\" >\n      \n    </div>\n    <div *ngFor=\"let img of images;let i = index\" id=\"{{'img'+i}}\" class=\"feed-wrapper--inner\">\n      <img  src=\"{{img}}\">\n    </div>\n  </div>\n  <div class=\"loader\" *ngIf=\"loading\">\n      <img src='https://loading.io/spinners/microsoft/lg.rotating-balls-spinner.gif'/>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -236,6 +240,7 @@ var DogsCompComponent = /** @class */ (function () {
         });
         this.show = false;
     };
+    //reload page
     DogsCompComponent.prototype.reload = function () {
         location.reload();
     };
@@ -352,6 +357,13 @@ var RouteModuleRoutingModule = /** @class */ (function () {
     function RouteModuleRoutingModule(router) {
         this.router = router;
     }
+    //redirect function when Nav item clicked when on same page
+    RouteModuleRoutingModule.prototype.redirectTo = function (uri) {
+        var _this = this;
+        this.router.navigateByUrl('/reload', { skipLocationChange: true }).then(function () {
+            return _this.router.navigate([uri]);
+        });
+    };
     RouteModuleRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes, { onSameUrlNavigation: "reload" })],
